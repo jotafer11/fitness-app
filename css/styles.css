@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+.topnav {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.topnav .navbar-brand {
+    color: #DF595A;
+}
+
+.logotext {
+    font-family: 'Russo One', sans-serif;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	float: left;
+	color: #c6c7cb;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 28px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	color: #DF595A;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+	color: #DF595A;
+}
+
+#hr1, #hr2 {
+	font-weight: bold;
+}
+
+/* Centered section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+
+/* ------------------------- */
+/* HEADER */
+/* ------------------------- */
+
+header {
+	padding: 20px 0;
+}
+
+header .logo {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+h1, h2 {
+	color: #DF595A;
+	
+}
+
+#h2-rutina {
+	color: #c6c7cb;
+	text-align: center;	
+}
+
+#h2-rutina-n {
+	color: #c6c7cb;
+}
+
+header form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+
+header .categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categorias a {
+	color: #c6c7cb;
+	margin: 10px 15px;
+	font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header .categorias a.activo {
+	color: #DF595A;
+}
+
+/* ------------------------- */
+/* BODY */
+/* ------------------------- */
+
+body {
+	background: #3A3D4E;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#dieta, #busqueda {
+	margin-top: 30px;
+}
+
+.contenedor {
+
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
+	border: 2px solid #878893;
+	border-radius: 20px;
+	padding: 25px 50px 75px;
+}
+
+#contenedor2 {
+	margin-top: 10px;
+	color: #c6c7cb;		
+}
+
+
+/* ------------------------- */
+/* Grid */
+/* ------------------------- */
+
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(25% - 20px);
+}
+
+.grid .item-contenido {
+	position: relative;
+}
+
+.grid .item img {
+    width: 100%;
+    height: 110px;
+    cursor: pointer;
+    border-radius: 10px;
+	vertical-align: top;
+}
+
+
+#rutina-piernas {
+	margin-top: 20px;
+  list-style: none;
+}
+
+/* ------------------------- */
+/* Overlay */
+/* ------------------------- */
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.overlay.activo {
+	display: flex;
+}
+
+.overlay img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.overlay .descripcion {
+	display: block;
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 5px;
+	border-radius: 10px;
+	max-width: 50%;
+}
+
+.contenedor-img {
+    position: relative;
+    max-width: 700px;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
+
+ul#horizontal-list {
+	text-align: center;
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+		margin-left: 35px;
+	}
+
+
+#setsito {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contenedor-p {
+	color: #c6c7cb;	
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
+	border: 2px solid #878893;
+	border-radius: 20px;
+	padding: 25px 50px 75px;
+}
+
+
+iframe {
+    display: block;
+    border-style:none;
+}
+
+/* Mediaqueries */
+
+@media screen and (max-width: 700px) {
+	.grid .item {
+		width: calc(50% - 20px);
+	}
+
+}
